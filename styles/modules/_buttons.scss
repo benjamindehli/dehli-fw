@@ -1,0 +1,62 @@
+/* Buttons: */
+.button {
+  padding: 6px 12px;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 1.3;
+  font-size: 18px;
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+  font-weight: 400;
+}
+
+.button.bg-white{@include border($white);}
+.button.bg-white:hover{
+  background-color: hover($white);}
+
+
+.button.bg-black, .button.border-black{@include border($black);}
+.button.bg-black {
+  color: $white;
+}
+.button.border-black {
+  background-color: $white;
+  color: $black}
+.button.bg-black:hover, .button.border-black:hover{
+  background-color: hover($black);
+  color: $white;
+}
+
+.button.bg-purple, .button.border-purple{@include border($purple);}
+.button.bg-purple {
+  color: $white;
+}
+.button.border-purple{
+  background-color: $white;
+  color: $purple;
+}
+.button.bg-purple:hover, .button.border-purple:hover{
+  background-color: hover($purple);
+  color: $white
+}
+
+.button.bg-blue{@include border($blue);}
+.button.bg-blue:hover{background-color: hover($blue);}
+
+.button.bg-cyan{@include border($cyan);}
+.button.bg-cyan:hover{background-color: hover($cyan);}
+
+.button.bg-green{@include border($green);}
+.button.bg-green:hover{background-color: hover($green);}
+
+.button.bg-yellow{@include border($yellow);}
+.button.bg-yellow:hover{background-color: hover($yellow);}
+
+.button.bg-orange{@include border($orange);}
+.button.bg-orange:hover{background-color: hover($orange);}
+
+.button.bg-red{@include border($red);}
+.button.bg-red:hover{background-color: hover($red);}

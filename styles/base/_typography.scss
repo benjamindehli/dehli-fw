@@ -9,3 +9,8 @@ h4,
 h5 {
   font-weight: $font-header-weight;
 }
+
+a {
+  color: inherit;
+  text-decoration: none!important;
+}

@@ -1,0 +1,18 @@
+nav ul {
+  height: 50px;
+  margin: 0;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 20px;
+
+}
+nav ul li a, nav ul li p {
+  text-decoration: none;
+  padding: 15px;
+  display: inline-block;
+}
+
+nav.fixed{
+  top: 0;
+}

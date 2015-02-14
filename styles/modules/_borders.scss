@@ -1,0 +1,22 @@
+
+/* Borders: */
+.bg-white.border{@include border($white);}
+.bg-black.border{@include border($black);}
+.bg-purple.border{@include border($purple);}
+.bg-blue.border{@include border($blue);}
+.bg-cyan.border{@include border($cyan);}
+.bg-green.border{@include border($green);}
+.bg-yellow.border{@include border($yellow);}
+.bg-orange.border{@include border($orange);}
+.bg-red.border{@include border($red);}
+
+/* Unique borders */
+.border-white{@include border($white);}
+.border-black{@include border($black);}
+.border-purple{@include border($purple);}
+.border-blue{@include border($blue);}
+.border-cyan{@include border($cyan);}
+.border-green{@include border($green);}
+.border-yellow{@include border($yellow);}
+.border-orange{@include border($orange);}
+.border-red{@include border($red);}

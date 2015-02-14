@@ -1,0 +1,38 @@
+.container {
+  padding: 15px;
+}
+.round {
+  @include border-radius(4px);
+}
+
+.shadow {
+  @include box-shadow(1px, 1px, 3px, 0px, $shadow-color )
+}
+
+.clearfix {
+  clear: both;
+}
+
+/* Alignment */
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-left {
+  float: right;
+}
+
+/* Positions */
+.fixed {
+  position: fixed!important;
+}

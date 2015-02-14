@@ -3,7 +3,8 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <link href="css/standard.css" rel="stylesheet">
+    <link href="styles/main.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 </head>
 <body>
 <nav class="bg-black fg-white">
@@ -12,13 +13,114 @@
         <li><a href="#">menuItem2</a></li>
     </ul>
 </nav>
+<aside class="left fixed col-2">
+    <nav class="bg-white fg-black col-2">
+        <ul>
+            <li><a href="#">Grid</a></li>
+            <li><a href="#">Colors</a></li>
+            <li><a href="#">Borders</a></li>
+            <li><a href="#">menuItem2</a></li>
+        </ul>
+        <div class="clearfix"></div>
+    </nav>
+    <div class="clearfix"></div>
+</aside>
 
-<div class="col-9">
+<div class="col-10">
     <div class="container">
         <h1>Testpage</h1>
-        <a class="button bg-blue fg-white round">
-            knapp
-        </a>
+        <h2>Grid</h2>
+        <div class="panel example-show">
+            <h3>Example:</h3>
+            <div class="col-1 bg-white border">col-1</div>
+            <div class="col-1 bg-white border">col-1</div>
+            <div class="col-2 bg-white border">col-2</div>
+            <div class="col-2 bg-white border">col-2</div>
+            <div class="col-3 bg-white border">col-3</div>
+            <div class="col-3 bg-white border">col-3</div>
+            <div class="col-4 bg-white border">col-4</div>
+            <div class="col-8 bg-white border">col-8</div>
+            <div class="col-5 bg-white border">col-5</div>
+            <div class="col-7 bg-white border">col-7</div>
+            <div class="col-3 bg-white border">col-3</div>
+            <div class="col-9 bg-white border">col-9</div>
+            <div class="col-12 bg-white border">col-12</div>
+            <div class="clearfix"></div>
+        </div>
+
+        <h2>Colors:</h2>
+        <h3>Background-colors</h3>
+        <div class="panel example-show">
+            <h3>Example:</h3>
+            <div class="col-2 bg-blue"></div>
+            <div class="col-2 bg-red"></div>
+            <div class="col-2 bg-green"></div>
+            <div class="col-2 bg-yellow"></div>
+            <div class="col-2 bg-black fg-white"></div>
+            <div class="col-2 bg-white"></div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="panel example-code">
+            <h3>Code:</h3>
+            <pre>
+                <code class="language-html" data-lang="html">
+                    &lt;div class="col-2 bg-blue"&gt;&lt;/div&gt;
+                    &lt;div class="col-2 bg-red"&gt;&lt;/div&gt;
+                    &lt;div class="col-2 bg-green"&gt;&lt;/div&gt;
+                    &lt;div class="col-2 bg-yellow"&gt;&lt;/div&gt;
+                    &lt;div class="col-2 bg-black fg-white"&gt;&lt;/div&gt;
+                    &lt;div class="col-2 bg-white"&gt;&lt;/div&gt;
+                </code>
+            </pre>
+        </div>
+        <h3>Foreground-colors</h3>
+        <div class="panel example-show">
+        <div class="col-2 fg-blue">Blue</div>
+        <div class="col-2 fg-red">Red</div>
+        <div class="col-2 fg-green">Green</div>
+        <div class="col-2 fg-yellow">Yellow</div>
+        <div class="col-2 fg-black">Black</div>
+        <div class="col-2 fg-white">White</div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="panel example-code">
+
+            <pre>
+                <code class="language-html" data-lang="html">
+                    &lt;div class="col-2 fg-blue"&gt;Blue&lt;/div&gt;
+                    &lt;div class="col-2 fg-red"&gt;Red&lt;/div&gt;
+                    &lt;div class="col-2 fg-green"&gt;Green&lt;/div&gt;
+                    &lt;div class="col-2 fg-yellow"&gt;Yellow&lt;/div&gt;
+                    &lt;div class="col-2 fg-black"&gt;Black&lt;/div&gt;
+                    &lt;div class="col-2 fg-white"&gt;White&lt;/div&gt;
+                </code>
+            </pre>
+        </div>
+        <h3>Borders</h3>
+        <div class="panel example-show">
+        <div class="col-2 bg-blue border">bg-blue</div>
+        <div class="col-2 bg-red border">bg-red</div>
+        <div class="col-2 bg-green border">bg-green</div>
+        <div class="col-2 bg-yellow border">bg-yellow</div>
+        <div class="col-2 bg-black fg-white border">bg-black</div>
+        <div class="col-2 bg-white border">bg-white</div>
+            <div class="clearfix"></div>
+            </div>
+        <div class="panel example-code">
+
+            <pre>
+                <code class="language-html" data-lang="html">
+                    &lt;div class="col-2 bg-blue border"&gt;Blue&lt;/div&gt;
+                    &lt;div class="col-2 bg-red border"&gt;Red&lt;/div&gt;
+                    &lt;div class="col-2 bg-green border"&gt;Green&lt;/div&gt;
+                    &lt;div class="col-2 bg-yellow border"&gt;Yellow&lt;/div&gt;
+                    &lt;div class="col-2 bg-black border"&gt;Black&lt;/div&gt;
+                    &lt;div class="col-2 bg-white border"&gt;White&lt;/div&gt;
+                </code>
+            </pre>
+        </div>
+        <h3>Buttons</h3>
+        <a class="button bg-blue fg-white">button bg-blue fg-white</a>
     </div>
 </div>
 <footer class="fixed bg-black fg-white col-12">

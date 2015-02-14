@@ -1,0 +1,58 @@
+%bg-white{background-color: $white;}
+%fg-white{color: $white;}
+%bg-green {background-color: $green;}
+%fg-green {color: $green;}
+%bg-red{background-color: $red;}
+%fg-red{color: $red;}
+%bg-blue{background-color: $blue;}
+%fg-blue{color: $blue;}
+%bg-yellow{background-color: $yellow;  }
+%fg-yellow{color: $yellow;  }
+%bg-black {background-color: $black;}
+%fg-black {color: $black;}
+
+.bg-white{@extend %bg-white;}
+.bg-green{@extend %bg-green;}
+.bg-red{@extend %bg-red;}
+.bg-blue{@extend %bg-blue;}
+.bg-yellow{@extend %bg-yellow;}
+.bg-black{@extend %bg-black;}
+
+.fg-white{@extend %fg-white;}
+.fg-green{@extend %fg-green;}
+.fg-red{@extend %fg-red;}
+.fg-blue{@extend %fg-blue;}
+.fg-yellow{@extend %fg-yellow;}
+.fg-black{@extend %fg-black;}
+
+.bg-white .border{@include border($white);}
+.bg-green .border{@include border($green);}
+.bg-red .border{@include border($red);}
+.bg-blue .border{@include border($blue);}
+.bg-yellow .border{@include border($yellow);}
+.bg-black .border{@include border($black);}
+
+.button.bg-white{@include border($white);}
+.button.bg-green{@include border($green);}
+.button.bg-red{@include border($red);}
+.button.bg-blue{@include border($blue);}
+.button.bg-yellow{@include border($yellow);}
+.button.bg-black{@include border($black);}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: percentage(($i / 12));
+    float: left;
+  }
+}
+
+
+nav.bg-green li:hover{background-color: hover($green);}
+
+.round {
+  @include border-radius(4px);
+}
+
+.shadow {
+  @include box-shadow(1px, 1px, 3px, 0px, $shadow-color )
+}

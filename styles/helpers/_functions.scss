@@ -1,0 +1,3 @@
+@function hover($color){
+  @return darken($color, 9%)
+}

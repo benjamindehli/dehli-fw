@@ -9,6 +9,17 @@
 .bg-orange{background-color: $orange;}
 .bg-red{background-color: $red;}
 
+/* Gradient background colors: */
+.bg-gradient-white{@include gradient($white)}
+.bg-gradient-black{@include gradient($black)}
+.bg-gradient-purple{@include gradient($purple)}
+.bg-gradient-blue{@include gradient($blue)}
+.bg-gradient-cyan{@include gradient($cyan)}
+.bg-gradient-green{@include gradient($green)}
+.bg-gradient-yellow{@include gradient($yellow)}
+.bg-gradient-orange{@include gradient($orange)}
+.bg-gradient-red{@include gradient($red)}
+
 /* Foreground colors: */
 .fg-white{color: $white;}
 .fg-black{color: $black;}

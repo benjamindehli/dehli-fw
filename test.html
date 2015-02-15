@@ -7,14 +7,18 @@
     <link href="css/custom.css" rel="stylesheet">
 </head>
 <body>
-<nav class="bg-black fg-white">
+<header>
+<nav class="bg-black fg-white fixed">
     <ul>
+        <li><a href="/">LiteStrap</a></li>
         <li><a href="#">menuItem</a></li>
         <li><a href="#">menuItem2</a></li>
     </ul>
 </nav>
-<aside class="left fixed col-2">
-    <nav class="bg-white fg-black col-2">
+</header>
+
+<aside class="left col-2">
+    <nav class="fg-black bg-white fixed border col-2">
         <ul>
             <li><a href="#">Grid</a></li>
             <li><a href="#">Colors</a></li>
@@ -89,8 +93,7 @@
         <div class="panel example-code">
 
             <pre>
-                <code class="language-html" data-lang="html">
-                    &lt;div class="col-2 fg-blue"&gt;Blue&lt;/div&gt;
+                <code class="language-html" data-lang="html">&lt;div class="col-2 fg-blue"&gt;Blue&lt;/div&gt;
                     &lt;div class="col-2 fg-red"&gt;Red&lt;/div&gt;
                     &lt;div class="col-2 fg-green"&gt;Green&lt;/div&gt;
                     &lt;div class="col-2 fg-yellow"&gt;Yellow&lt;/div&gt;
@@ -126,12 +129,54 @@
             </pre>
         </div>
         <h3>Buttons</h3>
+        <h4>Colored buttons</h4>
+        <div class="panel example-show">
+        <a class="button bg-white">button bg-white</a>
+        <a class="button bg-black">button bg-black</a>
+        <a class="button bg-purple">button bg-purple</a>
         <a class="button bg-blue">button bg-blue</a>
+        <a class="button bg-cyan">button bg-cyan</a>
+        <a class="button bg-green">button bg-green</a>
+        <a class="button bg-yellow">button bg-yellow</a>
+        <a class="button bg-orange">button bg-orange</a>
+        <a class="button bg-red">button bg-red</a>
+        </div>
+        <h4>Gradient buttons</h4>
+        <div class="panel example-show">
+            <a class="button bg-white">button bg-white</a>
+            <a class="button bg-black">button bg-black</a>
+            <a class="button bg-purple">button bg-purple</a>
+            <a class="button bg-blue">button bg-blue</a>
+            <a class="button bg-cyan">button bg-cyan</a>
+            <a class="button bg-green">button bg-green</a>
+            <a class="button bg-yellow">button bg-yellow</a>
+            <a class="button bg-orange">button bg-orange</a>
+            <a class="button bg-gradient-red">button bg-red</a>
+        </div>
+        <h4>Round colored buttons</h4>
+        <div class="panel example-show">
+        <a class="button bg-white round">button bg-white round</a>
+        <a class="button bg-black round">button bg-black round</a>
+        <a class="button bg-purple round">button bg-purple round</a>
         <a class="button bg-blue round">button bg-blue round</a>
-        <a class="button bg-black">button bg-blue round</a>
-        <a class="button border-black">button border-black round</a>
-        <a class="button border-purple">button border-black round</a>
-        <a class="button bg-purple">button border-black round</a>
+        <a class="button bg-cyan round">button bg-cyan round</a>
+        <a class="button bg-green round">button bg-green round</a>
+        <a class="button bg-yellow round">button bg-yellow round</a>
+        <a class="button bg-orange round">button bg-orange round</a>
+        <a class="button bg-red round">button bg-red round</a>
+        </div>
+        <h4>Border buttons</h4>
+        <div class="panel example-show">
+        <a class="button border-white">button border-white</a>
+        <a class="button border-black">button border-black</a>
+        <a class="button border-purple">button border-purple</a>
+        <a class="button border-blue">button border-blue</a>
+        <a class="button border-cyan">button border-cyan</a>
+        <a class="button border-green">button border-green</a>
+        <a class="button border-yellow">button border-yellow</a>
+        <a class="button border-orange">button border-orange</a>
+        <a class="button border-red">button border-red</a>
+            </div>
         <h3>Lists</h3>
         <div class="panel example-show">
             <ul>
@@ -145,6 +190,14 @@
                 <li class="bg-orange"><a href="#">Cyan</a></li>
                 <li class="bg-red"><a href="#">Cyan</a></li>
             </ul>
+        </div>
+        <h3>Forms</h3>
+        <div class="panel example-show">
+            <form>
+                <input type="text">
+                <textarea></textarea>
+                <input type="checkbox">
+            </form>
             </div>
     </div>
 </div>

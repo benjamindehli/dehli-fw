@@ -1,0 +1,33 @@
+header{
+  min-height: 50px;
+}
+
+header nav.fixed{
+  position: relative;
+  width: 100%;
+  display: block;
+  z-index: 1000;
+}
+header:after{
+  clear: both;
+  content: close-quote;
+}
+
+header nav ul {
+  height: 50px;
+  margin: 0;
+}
+header nav ul li {
+  display: inline-block;
+  line-height: 20px;
+
+}
+header nav ul li a, nav ul li p {
+  text-decoration: none;
+  padding: 15px;
+  display: inline-block;
+}
+
+header nav.fixed{
+  top: 0;
+}

@@ -1,6 +1,6 @@
 /* Buttons: */
 .button {
-  padding: 6px 12px;
+  padding: $button-padding;
   text-align: center;
   cursor: pointer;
   margin-top: 5px;
@@ -13,12 +13,17 @@
   font-weight: 400;
 }
 
-.button.bg-white{@include border($white);}
+.button.bg-white{
+  @include border($white);
+}
 .button.bg-white:hover{
-  background-color: hover($white);}
+  background-color: hover($white);
+}
 
 
-.button.bg-black, .button.border-black{@include border($black);}
+.button.bg-black, .button.border-black{
+  @include border($black);
+}
 .button.bg-black {
   color: $white;
 }
@@ -31,9 +36,7 @@
 }
 
 .button.bg-purple, .button.border-purple{@include border($purple);}
-.button.bg-purple {
-  color: $white;
-}
+.button.bg-purple {color: $white;}
 .button.border-purple{
   background-color: $white;
   color: $purple;
@@ -43,20 +46,71 @@
   color: $white
 }
 
-.button.bg-blue{@include border($blue);}
-.button.bg-blue:hover{background-color: hover($blue);}
+.button.bg-blue, .button.border-blue{@include border($blue);}
+.button.bg-blue{color: $white;}
+.button.border-blue{
+  background-color: $white;
+  color: $blue;
+}
+.button.bg-blue:hover, .button.border-blue:hover{
+  background-color: hover($blue);
+  color: $white;
+}
 
-.button.bg-cyan{@include border($cyan);}
-.button.bg-cyan:hover{background-color: hover($cyan);}
+.button.bg-cyan, .button.border-cyan{@include border($cyan);}
+.button.bg-cyan{color: $white;}
+.button.border-cyan{
+  background-color: $white;
+  color: $cyan;
+}
+.button.bg-cyan:hover, .button.border-cyan:hover{
+  background-color: hover($cyan);
+  color: $white;
+}
 
-.button.bg-green{@include border($green);}
-.button.bg-green:hover{background-color: hover($green);}
+.button.bg-green, .button.border-green{@include border($green);}
+.button.bg-green{color: $white}
+.button.border-green{
+  background-color: $white;
+  color: $green;
+}
+.button.bg-green:hover, .button.border-green:hover{
+  background-color: hover($green);
+  color: $white
+}
 
-.button.bg-yellow{@include border($yellow);}
-.button.bg-yellow:hover{background-color: hover($yellow);}
+.button.bg-yellow, .button.border-yellow{@include border($yellow);}
+.button.bg-yellow{color: $white}
+.button.border-yellow{
+  background-color: $white;
+  color: $yellow;
+}
+.button.bg-yellow:hover, .button.border-yellow:hover{
+  background-color: hover($yellow);
+  color: $white
+}
 
-.button.bg-orange{@include border($orange);}
-.button.bg-orange:hover{background-color: hover($orange);}
+.button.bg-orange, .button.border-orange{@include border($orange);}
+.button.bg-orange{color: $white}
+.button.border-orange{
+  background-color: $white;
+  color: $orange;
+}
+.button.bg-orange:hover, .button.border-orange:hover{
+  background-color: hover($orange);
+  color: $white
+}
 
-.button.bg-red{@include border($red);}
-.button.bg-red:hover{background-color: hover($red);}
+.button.bg-red, .button.border-red, .button.bg-gradient-red{@include border($red);}
+.button.bg-red, .button.bg-gradient-red{color: $white}
+.button.border-red{
+  background-color: $white;
+  color: $red;
+}
+.button.bg-red:hover, .button.border-red:hover{
+  background-color: hover($red);
+  color: $white
+}
+.button.bg-gradient-red:hover{
+  @include gradient(hover($red));
+}

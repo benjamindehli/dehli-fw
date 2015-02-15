@@ -1,0 +1,27 @@
+aside {
+  height: 100%;
+  position: fixed;
+}
+
+aside nav {
+  padding-top: 100px;
+  height: 120%;
+  top: -50px;
+  z-index: -1;
+
+}
+
+aside nav.fixed{
+
+}
+
+aside nav.fixed ul{
+
+
+}
+
+aside nav ul li {
+  display: block;
+  line-height: 20px;
+
+}

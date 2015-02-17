@@ -5,8 +5,8 @@
   float: left;
 }
 
-@for $i from 1 through 12 {
+@for $i from 1 through 13 {
   .col-#{$i} {
-    width: percentage(($i / 12));
+    width: percentage(($i / 13));
   }
 }

@@ -6,27 +6,27 @@
   margin-top: 5px;
   margin-bottom: 5px;
   line-height: 1.3;
-  font-size: 18px;
+  font-size: $font-size-button;
+  text-transform: uppercase;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
   display: inline-block;
   white-space: nowrap;
   vertical-align: middle;
   font-weight: 400;
 }
 
-.button.bg-white{
-  @include border($white);
-}
+.button.bg-white, .button.bg-gradient-white{@include border($white);  }
+.button.bg-white, .button.bg-gradient-white{color: $black;}
 .button.bg-white:hover{
   background-color: hover($white);
 }
+.button.bg-gradient-white:hover{
+  @include gradient(hover($white));
+}
 
 
-.button.bg-black, .button.border-black{
-  @include border($black);
-}
-.button.bg-black {
-  color: $white;
-}
+.button.bg-black, .button.border-black, .button.bg-gradient-black{@include border($black);}
+.button.bg-black, .button.bg-gradient-black {color: $white;}
 .button.border-black {
   background-color: $white;
   color: $black}
@@ -34,9 +34,12 @@
   background-color: hover($black);
   color: $white;
 }
+.button.bg-gradient-black:hover{
+  @include gradient(hover($black));
+}
 
-.button.bg-purple, .button.border-purple{@include border($purple);}
-.button.bg-purple {color: $white;}
+.button.bg-purple, .button.border-purple, .button.bg-gradient-purple{@include border($purple);}
+.button.bg-purple, .button.bg-gradient-purple {color: $white;}
 .button.border-purple{
   background-color: $white;
   color: $purple;
@@ -45,9 +48,12 @@
   background-color: hover($purple);
   color: $white
 }
+.button.bg-gradient-purple:hover{
+  @include gradient(hover($purple));
+}
 
-.button.bg-blue, .button.border-blue{@include border($blue);}
-.button.bg-blue{color: $white;}
+.button.bg-blue, .button.border-blue, .button.bg-gradient-blue{@include border($blue);}
+.button.bg-blue, .button.bg-gradient-blue{color: $white;}
 .button.border-blue{
   background-color: $white;
   color: $blue;
@@ -56,9 +62,12 @@
   background-color: hover($blue);
   color: $white;
 }
+.button.bg-gradient-blue:hover{
+  @include gradient(hover($blue));
+}
 
-.button.bg-cyan, .button.border-cyan{@include border($cyan);}
-.button.bg-cyan{color: $white;}
+.button.bg-cyan, .button.border-cyan, .button.bg-gradient-cyan{@include border($cyan);}
+.button.bg-cyan, .button.bg-gradient-cyan{color: $white;}
 .button.border-cyan{
   background-color: $white;
   color: $cyan;
@@ -67,9 +76,12 @@
   background-color: hover($cyan);
   color: $white;
 }
+.button.bg-gradient-cyan:hover{
+  @include gradient(hover($cyan));
+}
 
-.button.bg-green, .button.border-green{@include border($green);}
-.button.bg-green{color: $white}
+.button.bg-green, .button.border-green, .button.bg-gradient-green{@include border($green);}
+.button.bg-green, .button.bg-gradient-green{color: $white}
 .button.border-green{
   background-color: $white;
   color: $green;
@@ -78,9 +90,12 @@
   background-color: hover($green);
   color: $white
 }
+.button.bg-gradient-green:hover{
+  @include gradient(hover($green));
+}
 
-.button.bg-yellow, .button.border-yellow{@include border($yellow);}
-.button.bg-yellow{color: $white}
+.button.bg-yellow, .button.border-yellow, .button.bg-gradient-yellow{@include border($yellow);}
+.button.bg-yellow, .button.bg-gradient-yellow{color: $white}
 .button.border-yellow{
   background-color: $white;
   color: $yellow;
@@ -89,9 +104,12 @@
   background-color: hover($yellow);
   color: $white
 }
+.button.bg-gradient-yellow:hover {
+  @include gradient(hover($yellow));
+}
 
-.button.bg-orange, .button.border-orange{@include border($orange);}
-.button.bg-orange{color: $white}
+.button.bg-orange, .button.border-orange, .button.bg-gradient-orange{@include border($orange);}
+.button.bg-orange, .button.bg-gradient-orange{color: $white}
 .button.border-orange{
   background-color: $white;
   color: $orange;
@@ -99,6 +117,9 @@
 .button.bg-orange:hover, .button.border-orange:hover{
   background-color: hover($orange);
   color: $white
+}
+.button.bg-gradient-orange:hover{
+  @include gradient(hover($orange));
 }
 
 .button.bg-red, .button.border-red, .button.bg-gradient-red{@include border($red);}

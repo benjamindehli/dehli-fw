@@ -23,5 +23,8 @@ aside nav.fixed ul{
 aside nav ul li {
   display: block;
   line-height: 20px;
+}
 
+aside nav ul li ul li {
+  font-size: .9em;
 }

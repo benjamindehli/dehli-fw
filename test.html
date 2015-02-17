@@ -20,9 +20,16 @@
 <aside class="left col-2">
     <nav class="fg-black bg-white fixed border col-2">
         <ul>
-            <li><a href="#">Grid</a></li>
-            <li><a href="#">Colors</a></li>
-            <li><a href="#">Borders</a></li>
+            <li><a href="#grid">Grid</a></li>
+            <li><a href="#colors">Colors</a></li>
+            <li>
+                <ul>
+                    <li><a href="#colors-background">Background colors</a></li>
+                    <li><a href="#colors-foreground">Foreground colors</a></li>
+                </ul>
+            </li>
+            <li><a href="#borders">Buttons</a></li>
+            <li><a href="#buttons">Buttons</a></li>
             <li><a href="#">menuItem2</a></li>
         </ul>
         <div class="clearfix"></div>
@@ -32,7 +39,27 @@
 
 <div class="col-10">
     <div class="container">
+        <button onclick="clickCounter()" type="button">Click me!</button>
+        <form id="localStorageTest" method="post" action="">
+            <label>Navn:</label>
+            <input type="text" name="navn" id="navn" class="stored" value="" />
+
+            <label>E-post</label>
+            <input type="email" name="epost" id="epost" class="stored" value="" />
+
+            <label>Melding</label>
+            <textarea name="melding" id="melding" class="stored"></textarea>
+
+            <input type="submit" value="Submit">
+
+        </form>
+        <div id="test-resultat">
+<a class="" id="test-button">test</a>
+        </div>
+    </div>
+    <div class="container">
         <h1>Testpage</h1>
+        <section id="grid">
         <h2>Grid</h2>
         <div class="panel example-show">
             <h3>Example:</h3>
@@ -51,9 +78,10 @@
             <div class="col-12 bg-white border">col-12</div>
             <div class="clearfix"></div>
         </div>
-
+        </section>
+        <section id="colors">
         <h2>Colors:</h2>
-        <h3>Background-colors</h3>
+        <h3 id="colors-background">Background-colors</h3>
         <div class="panel example-show">
             <h3>Example:</h3>
             <div class="col-1 bg-white"></div>
@@ -67,6 +95,7 @@
             <div class="col-1 bg-red"></div>
             <div class="clearfix"></div>
         </div>
+
         <div class="panel example-code">
             <h3>Code:</h3>
             <pre>
@@ -80,7 +109,7 @@
                 </code>
             </pre>
         </div>
-        <h3>Foreground-colors</h3>
+        <h3 id="colors-foreground">Foreground-colors</h3>
         <div class="panel example-show">
         <div class="col-2 fg-blue">Blue</div>
         <div class="col-2 fg-red">Red</div>
@@ -102,6 +131,8 @@
                 </code>
             </pre>
         </div>
+        </section>
+        <section id="borders">
         <h3>Borders</h3>
         <div class="panel example-show">
             <div class="col-1 bg-white border"></div>
@@ -128,6 +159,8 @@
                 </code>
             </pre>
         </div>
+        </section>
+        <section id="buttons">
         <h3>Buttons</h3>
         <h4>Colored buttons</h4>
         <div class="panel example-show">
@@ -141,29 +174,41 @@
         <a class="button bg-orange">button bg-orange</a>
         <a class="button bg-red">button bg-red</a>
         </div>
-        <h4>Gradient buttons</h4>
-        <div class="panel example-show">
-            <a class="button bg-white">button bg-white</a>
-            <a class="button bg-black">button bg-black</a>
-            <a class="button bg-purple">button bg-purple</a>
-            <a class="button bg-blue">button bg-blue</a>
-            <a class="button bg-cyan">button bg-cyan</a>
-            <a class="button bg-green">button bg-green</a>
-            <a class="button bg-yellow">button bg-yellow</a>
-            <a class="button bg-orange">button bg-orange</a>
-            <a class="button bg-gradient-red">button bg-red</a>
-        </div>
         <h4>Round colored buttons</h4>
         <div class="panel example-show">
-        <a class="button bg-white round">button bg-white round</a>
-        <a class="button bg-black round">button bg-black round</a>
-        <a class="button bg-purple round">button bg-purple round</a>
-        <a class="button bg-blue round">button bg-blue round</a>
-        <a class="button bg-cyan round">button bg-cyan round</a>
-        <a class="button bg-green round">button bg-green round</a>
-        <a class="button bg-yellow round">button bg-yellow round</a>
-        <a class="button bg-orange round">button bg-orange round</a>
-        <a class="button bg-red round">button bg-red round</a>
+            <a class="button bg-white round">button bg-white round</a>
+            <a class="button bg-black round">button bg-black round</a>
+            <a class="button bg-purple round">button bg-purple round</a>
+            <a class="button bg-blue round">button bg-blue round</a>
+            <a class="button bg-cyan round">button bg-cyan round</a>
+            <a class="button bg-green round">button bg-green round</a>
+            <a class="button bg-yellow round">button bg-yellow round</a>
+            <a class="button bg-orange round">button bg-orange round</a>
+            <a class="button bg-red round">button bg-red round</a>
+        </div>
+        <h4>Gradient buttons</h4>
+        <div class="panel example-show">
+            <a class="button bg-gradient-white">button bg-gradient-white</a>
+            <a class="button bg-gradient-black">button bg-gradient-black</a>
+            <a class="button bg-gradient-purple">button bg-gradient-purple</a>
+            <a class="button bg-gradient-blue">button bg-gradient-blue</a>
+            <a class="button bg-gradient-cyan">button bg-gradient-cyan</a>
+            <a class="button bg-gradient-green">button bg-gradient-green</a>
+            <a class="button bg-gradient-yellow">button bg-gradient-yellow</a>
+            <a class="button bg-gradient-orange">button bg-gradient-orange</a>
+            <a class="button bg-gradient-red">button bg-gradient-red</a>
+        </div>
+        <h4>Round gradient buttons</h4>
+        <div class="panel example-show">
+            <a class="button bg-gradient-white round">button bg-gradient-white round</a>
+            <a class="button bg-gradient-black round">button bg-gradient-black round</a>
+            <a class="button bg-gradient-purple round">button bg-gradient-purple round</a>
+            <a class="button bg-gradient-blue round">button bg-gradient-blue round</a>
+            <a class="button bg-gradient-cyan round">button bg-gradient-cyan round</a>
+            <a class="button bg-gradient-green round">button bg-gradient-green round</a>
+            <a class="button bg-gradient-yellow round">button bg-gradient-yellow round</a>
+            <a class="button bg-gradient-orange round">button bg-gradient-orange round</a>
+            <a class="button bg-gradient-red round">button bg-gradient-red round</a>
         </div>
         <h4>Border buttons</h4>
         <div class="panel example-show">
@@ -177,6 +222,7 @@
         <a class="button border-orange">button border-orange</a>
         <a class="button border-red">button border-red</a>
             </div>
+        </section>
         <h3>Lists</h3>
         <div class="panel example-show">
             <ul>
@@ -204,6 +250,68 @@
 <footer class="fixed bg-black fg-white col-12">
     footer
 </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+
+</script>
+
+<script>
+    if(typeof(Storage) !== "undefined") {
+        document.write('LocalStorage funker');
+    } else {
+        document.write('LocalStorage fungerer ei');
+    }
+
+
+    function supports_html5_storage() {
+        try {
+            return 'localStorage' in window && window['localStorage'] !== null;
+
+        } catch (e) {
+
+            return false;
+        }
+    }
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        function init() {
+            if (localStorage["navn"]) {
+                $('#navn').val(localStorage["navn"]);
+            }
+            if (localStorage["epost"]) {
+                $('#epost').val(localStorage["epost"]);
+            }
+            if (localStorage["melding"]) {
+                $('#melding').val(localStorage["melding"]);
+            }
+        }
+        init();
+    });
+
+
+    //Lagring av inputfelt med klassen .stored
+    $('.stored').keyup(function () {
+        localStorage[$(this).attr('name')] = $(this).val();
+    });
+
+    $('localStorageTest').submit(function() {
+        localStorage.clear();
+    });
+</script>
+
+<script type="text/javascript">
+    // Lagre antall klikk
+    function clickCounter() {
+        // Sjekker om localstorage er tilgjengelig
+        if(typeof(Storage) !== "undefined") {
+            $('#test-button').addClass(localStorage.navn);
+          //  document.getElementById("test-resultat").innerHTML = "You have clicked the button " + localStorage.navn + " time(s) in this session.";
+        }
+    }
+</script>
 
 </body>
 </html>

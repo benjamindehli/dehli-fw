@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="styles/main.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <nav class="bg-black fg-white fixed">
+        <ul>
+            <li><a href="/">LiteStrap</a></li>
+            <li><a href="#">menuItem</a></li>
+            <li><a href="#">menuItem2</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<div class="col-12">
+    <div class="container">
+
+        <form id="localStorageTest" method="post" action="">
+
+
+            <label>Content</label>
+            <input type="text" name="text" id="text" class="stored" value="" />
+
+            <label>Color:</label>
+            <select name="color" id="color" class="color">
+                <option name="color" value="purple">Purple</option>
+                <option name="color" value="blue">Blue</option>
+                <option name="color" value="cyan">Cyan</option>
+                <option name="color" value="green">Green</option>
+                <option name="color" value="yellow">Yellow</option>
+                <option name="color" value="orange">Orange</option>
+                <option name="color" value="red">Red</option>
+            </select>
+
+            <label>Type:</label>
+            <select name="type" id="type">
+                <option name="type" value="bg">Solid</option>
+                <option name="type" value="bg-gradient">Gradient</option>
+                <option name="type" value="border">Border</option>
+            </select>
+
+            <select name="round" id="round">
+                <option name="type" value="round">Rounded</option>
+                <option name="type" value="">Square</option>
+            </select>
+
+
+
+            <input class="button bg-red round" type="submit" value="Reset">
+
+        </form>
+        <div id="test-resultat">
+            <a class="" id="test-button">test</a>
+            Kode:
+            <div id="htmlkode">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer class="fixed bg-black fg-white col-12">
+    footer
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+
+</script>
+
+<script>
+    if(typeof(Storage) !== "undefined") {
+        document.write('LocalStorage funker');
+    } else {
+        document.write('LocalStorage fungerer ei');
+    }
+
+
+    function supports_html5_storage() {
+        try {
+            return 'localStorage' in window && window['localStorage'] !== null;
+
+        } catch (e) {
+
+            return false;
+        }
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        /*
+         * check browser supports local storage
+         */
+        if (localStorage) {
+            /*
+             * if form field values exist in local storage use
+             * them to populate the form when the page loads
+             */
+            if (localStorage.type) {
+                $("#color").find("option[value=" + localStorage.type + "]").attr("selected", true);
+            }
+            if (localStorage.name) {
+                $("#text").val(localStorage.name);
+            }
+            if (localStorage.email) {
+                $("#email").val(localStorage.email);
+            }
+            if (localStorage.message) {
+                $("#message").val(localStorage.message);
+            }
+
+            if (localStorage.gradient == "checked") {
+                $("#gradient").attr("checked", "checked");
+            }
+
+            /*
+             * when a form field changes store it's value in local storage
+             */
+            $("input[type=text],select,textarea").change(function(){
+                $this = $(this);
+                localStorage[$this.attr("name")] = $this.val();
+            });
+            $("input[type=checkbox]").change(function(){
+                $this = $(this);
+                localStorage[$this.attr("name")] = $this.attr("checked");
+            });
+
+            $("form")
+                /*
+                 * clear local storage when the form is submitted
+                 */
+                    .submit(function(){
+                        localStorage.clear();
+                    })
+                /*
+                 * output local storage to the console each time the form changes
+                 * (you may want to remove this code on the production server)
+                 */
+                    .change(function(){
+                        console.log(localStorage);
+                        $('#test-button').removeClass();
+                        $('#test-button').addClass('button');
+                        $('#test-button').addClass(localStorage.type + '-' + localStorage.color + ' ' + localStorage.round);
+                        $('#test-button').text(localStorage.text);
+                        $('#htmlkode').text('<a class=\"button ' + localStorage.type + '-' + localStorage.color + ' ' + localStorage.round + '\">' + localStorage.text + '</a>');
+
+                    });
+        }
+    });
+</script>
+
+<script type="text/javascript">
+    // Lagre antall klikk
+    function clickCounter() {
+        // Sjekker om localstorage er tilgjengelig
+        if(typeof(Storage) !== "undefined") {
+
+
+
+            //  document.getElementById("test-resultat").innerHTML = "You have clicked the button " + localStorage.navn + " time(s) in this session.";
+        }
+    }
+</script>
+
+</body>
+</html>
